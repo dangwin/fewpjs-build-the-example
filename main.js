@@ -4,6 +4,36 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+const err = document.getElementById("modal")
+err.setAttribute("class", "hidden")
+
+const hearts = document.getElementsByClassName("like-glyph")
+
+function likeCallback(e){
+  let heart = e.target
+  mimicServerCall(e)
+  .then(function(serverMessage){
+    heart.innerText = FULL_HEART
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
